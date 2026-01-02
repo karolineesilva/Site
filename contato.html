@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact</title> 
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white text-gray-800 font-sans">
+
+<!-- Navbar Tailwind -->
+<header class="bg-white shadow fixed w-full top-0 left-0 z-50">
+  <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+    
+    <!-- Logo -->
+    <a href="index.html" class="flex items-center">
+      <img src="NEXA PLUS.svg" alt="Logomarca Nexa Plus" class="h-14">
+    </a>
+
+    <!-- Links desktop -->
+    <nav class="hidden md:flex space-x-6">
+      <a href="index.html" class="text-gray-700 hover:text-red-600">Accueil</a>
+      <a href="services.html" class="text-gray-700 hover:text-red-600">Services</a>
+      <a href="contact.html" class="text-gray-700 hover:text-red-600">Contact</a>
+    </nav>
+
+    <!-- Botão mobile -->
+    <button id="menu-btn" class="md:hidden text-gray-700 focus:outline-none text-2xl">
+      ☰
+    </button>
+  </div>
+
+  <!-- Menu Mobile -->
+  <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+    <a href="index.html" class="block px-6 py-3 text-gray-700 hover:bg-gray-100">Accueil</a>
+    <a href="servicos.html" class="block px-6 py-3 text-gray-700 hover:bg-gray-100">Services</a>
+    <a href="contact.html" class="block px-6 py-3 text-gray-700 hover:bg-gray-100">Contact</a>
+  </div>
+</header>
+
+<script>
+  // Script para abrir/fechar menu mobile
+  const btn = document.getElementById("menu-btn");
+  const menu = document.getElementById("mobile-menu");
+  btn.addEventListener("click", () => {
+    menu.classList.toggle("hidden");
+  });
+</script>
+
+<!-- Conteúdo principal -->
+<main class="pt-24">
+
+<section class="relative">
+  <div
+    class="bg-cover bg-center h-64 relative"
+    style="background-image: url(ChatGPT\ Image\ 4\ de\ jun.\ de\ 2025\,\ 22_20_43.png);"
+  >
+    <div class="absolute inset-0 bg-white bg-opacity-40"></div>
+    <div class="relative h-full flex flex-col items-center justify-center text-center px-4">
+      <h1 class="text-gray-900 text-4xl font-bold">Contact</h1>
+      <p class="text-gray-700 text-xl mt-2">Nous serions ravis de vous aider. N'hésitez pas à nous écrire !</p>
+    </div>
+  </div>
+</section>
+
+<section class="py-12 px-6 md:px-24">
+  <div class="grid md:grid-cols-2 gap-10">
+    <div>
+      <h2 class="text-2xl font-semibold mb-4">Envoyez-nous un message</h2>
+      <form class="space-y-4">
+        <label for="name" class="block text-gray-700">Nom et prénom</label>
+        <input id="name" type="text" placeholder="Nom et prénom" class="w-full p-3 border border-gray-300 rounded" required />
+
+        <label for="email" class="block text-gray-700">Email</label>
+        <input id="email" type="email" placeholder="Email" class="w-full p-3 border border-gray-300 rounded" required />
+
+        <label for="phone" class="block text-gray-700">Téléphone</label>
+        <input id="phone" type="text" placeholder="Téléphone" class="w-full p-3 border border-gray-300 rounded" />
+
+        <label for="message" class="block text-gray-700">Message</label>
+        <textarea id="message" rows="5" placeholder="Message" class="w-full p-3 border border-gray-300 rounded" required></textarea>
+
+        <button type="submit" class="bg-red-600 text-white px-6 py-3 rounded hover:bg-red-700">Envoyer</button>
+      </form>
+    </div>
+
+    <div>
+      <h2 class="text-2xl font-semibold mb-4">Contactez nous</h2> 
+      <p class="mb-2"><strong>Adresse :</strong> N°95 3éme étage lot Alhouda, Ait melloul, Agadir </p>
+      <p class="mb-2"><strong>Téléphone :</strong> +212 6 32 31 87 56</p>
+      <p class="mb-2"><strong>E-mail :</strong> contact.nexaplus@gmail.com</p>
+      <iframe class="mt-6 w-full h-64 border border-gray-300" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3443.6827331403024!2d-9.504195!3d30.331540999999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xdb3c70059292edb%3A0xb9db553fc195ef48!2sSt%C3%A9%20NEXA%20PLUS!5e0!3m2!1spt-BR!2sbr!4v1756340411474!5m2!1spt-BR!2sbr"></iframe>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- WhatsApp Floating Button -->
+<a href="https://wa.me/+212632318756?text=Bonjour%2C%20vous%20souhaitez%20plus%20d%27informations%20%3F"  
+   target="_blank" 
+   class="whatsapp-float">
+  <img src="https://cdn-icons-png.flaticon.com/512/220/220236.png" 
+       alt="WhatsApp" 
+       width="50" 
+       height="50">
+</a>
+
+<style>
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+  animation: pulse 2s infinite;
+}
+.whatsapp-float img {
+  transition: transform 0.3s;
+}
+.whatsapp-float img:hover {
+  transform: scale(1.2);
+}
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.15); }
+  100% { transform: scale(1); }
+}
+</style>
+
+</body>
+</html>
