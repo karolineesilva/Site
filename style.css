@@ -1,0 +1,207 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+header {
+  background-color: #ffffff;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+nav a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+}
+main {
+  padding: 20px;
+}
+footer {
+  background-color: #eee;
+  text-align: center;
+  padding: 10px;
+}
+
+.minha-navbar {
+  background-color: #ffffff; /* ou qualquer outra cor */
+}
+
+.hero-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-section .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+.hero-section .content {
+  position: relative;
+  z-index: 2;
+}
+
+/* Reset e configurações globais */
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+.hero-left-text {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-image: url(fundo.jpg);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: flex-start; /* Agora o conteúdo vai ficar no topo */
+  justify-content: flex-start;
+  padding: 60px 20px 0 60px; /* topo 100px, laterais e zero no bottom */
+  color: #edeff2;
+  overflow: hidden;
+  text-align: left;
+}
+
+.hero-left-text .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(21, 34, 56, 0.7); /* azul escuro com opacidade */
+  z-index: 1;
+}
+
+
+.hero-left-text .content {
+  position: relative;
+  z-index: 2;
+  max-width: 600px;
+  animation: fadeInUp 1s ease-out;
+}
+
+.hero-left-text .pre-title {
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #f2eeeea9;
+  margin-bottom: 10px;
+}
+
+.hero-left-text h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.hero-left-text .lead {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.btn-custom {
+  background-color: #01B1D7;
+  color: white;
+  padding: 12px 30px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  border: none;
+  transition:  0.3s ease;
+}
+
+.btn-custom:hover {
+  background-color: #0196ba;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .pricing-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .pricing-box {
+    flex: 1 1 100% !important;
+    max-width: 90%;
+  }
+}
+
+.servicos-container {
+  display: flex;
+  justify-content: center; /* centraliza horizontalmente */
+  align-items: center;     /* centraliza verticalmente */
+  height: 200px;           /* ocupa 100% da altura da tela */
+  background-color: #f8f9fa; /* opcional: cor de fundo suave */
+}
+
+.servicos-container h2 {
+  font-size: 2.5rem;         /* ajuste esse valor para ficar igual ao site */
+  font-weight: 800;        /* grosso como o do site */
+  text-transform: uppercase;
+  color: #333;             /* cor escura, troque se precisar */
+  margin: 0;
+}
+
+.minha-navbar .nav-link {
+  color: #4050a9 !important;
+}
+
+.carousel-item h3 {
+    margin-top: 30px; /* distância do topo do slide */
+}
+
+/* Estilo do item do carrossel */
+.carousel-item {
+    position: relative;
+    min-height: 400px;
+    color: white;
+    background: url('ChatGPT Image 4 de jun. de 2025, 22_20_43.png') no-repeat center/cover;
+}
+
+/* Overlay semitransparente para clarear o fundo */
+.carousel-item .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2); /* ajuste a opacidade conforme necessário */
+    z-index: 1;
+}
+
+/* Faz o conteúdo do carrossel aparecer acima do overlay */
+.carousel-item h3,
+.carousel-item p,
+.carousel-item a {
+    position: relative;
+    z-index: 2;
+}
